@@ -1,0 +1,74 @@
+>>> obj={1:1,2:2,3:3}
+>>> obj
+{1: 1, 2: 2, 3: 3}
+>>> obj[1]
+1
+>>> obj[5] if the values are not present it shows error but the next syntax doesn't
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 5
+>>> obj.get(2)
+2
+>>> 
+
+>>> for items in obj:
+...     print(items)
+...     print(obj[items])
+... 
+1
+1
+2
+2
+3
+3
+>>> 
+
+
+>>> for key,value in obj.items(): we have to call items 
+...     print(key," ",value)
+... 
+1   1
+2   2
+3   3
+>>> 
+
+>>> 1 in obj
+True
+>>> if 1 in obj:
+...     print("kkk")
+... 
+kkk
+
+>>> obj['k']='ll'
+>>> obj
+{1: 1, 2: 2, 3: 3, 'k': 'll'}
+
+
+>>> obj.pop('k')
+'ll'
+>>> obj
+{1: 1, 2: 2, 3: 3}
+
+>>> obj.popitem() to delete last item
+(3, 3)
+>>> 
+
+obj[key1][key2]  for dic inside dic
+
+>>> y = {x:x**2 for x in range(6)}
+>>> y
+{0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+>>> y.clear()
+>>> y
+{}
+
+
+
+>>> defaultValue = 44
+>>> list =['a','b','c']
+>>> newDict = dict.fromkeys(list,defaultValue)
+>>> newDict
+{'a': 44, 'b': 44, 'c': 44}
+>>> newDict = dict.fromkeys(list,list)
+>>> newDict
+{'a': ['a', 'b', 'c'], 'b': ['a', 'b', 'c'], 'c': ['a', 'b', 'c']}

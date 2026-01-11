@@ -1,0 +1,13 @@
+when you terminate a shell using ctrl z its get suspended i guess the variable declarion remains same
+
+and its get deleted only ctrl D 
+
+"chai"*4
+"chai"*4
+'chaichaichaichai'
+
+import os
+os.getcwd()
+
+import sys
+sys.platform

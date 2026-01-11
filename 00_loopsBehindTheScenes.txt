@@ -1,0 +1,12 @@
+iteration toools
+like for,while,comprehension(squares_of_evens = [x**2 for x in range(10) if x % 2 == 0]
+# Output: [0, 4, 16, 36, 64]
+)
+
+we need iterable objects like list,file etc
+look this is how loops work in python 
+iterable tools works on iterable objects and then it returns iter which has first objectv location and next 
+
+and when we call __next__ it gives next value address and consecutive value location for the last value an exception is raised
+
+A for loop calls iter() on an iterable to get an iterator, then repeatedly calls __next__() to get the next value until StopIteration is raised.

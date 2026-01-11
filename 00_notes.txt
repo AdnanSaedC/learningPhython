@@ -1,0 +1,15 @@
+intent here is spacing
+
+dont use camel case here
+
+look when you import something the thing in that file only gets imported 
+the newly updated thing wont be available
+
+solution
+its like nodemon all the chages get updated
+from importlib import reload
+reload(filename)  you have to execute this line in order to get current code
+
+in order to clear the terminal in python shell ctrl+L
+
+if elif else

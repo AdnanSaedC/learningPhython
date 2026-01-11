@@ -1,0 +1,71 @@
+mutuble are the things which can be changed and the opposite of it is immutable
+
+evrything is object in python
+
+immutable means
+lets say
+
+name = "adnan"
+in memory a separate place is assign and the value is "adnan"
+
+and the name points towards that
+mutable means you can make chages in the storage where adnan is stored
+
+you can make adnan -> "adnannn"
+
+in python for string thats not possible
+
+where will assign another value to a variable a seprate spca eis created and the new value is assigned and  our variable noe points towards this new location
+
+this is was created in the first place to save space
+
+name -> "adnan"
+name -> "adnannn"
+
+if the space is not being pointed by any variable then garbage collector wipes out the space
+
+the garbage collection for numbers and string happens little late because their creation takes time so python keeps that in space so that in near future we may need it    
+
+a=5
+a=a+2 behind the scene a=5+2 the variables gets replaced by the values
+
+>>> mylistone=[1,2,3]
+>>> mylisttwo=mylistone
+>>> mylistone
+[1, 2, 3]
+>>> mylisttwo
+[1, 2, 3]
+>>> mylisttwo[0]=5
+>>> mylisttwo
+[5, 2, 3]
+>>> mylistone
+[5, 2, 3]  look i made changes in mylistone and its reflected in both the places
+>>> mylistone=[5,2,3] but now iam creating a new refrence
+>>> mylistone
+[5, 2, 3]
+>>> mylisttwo
+[5, 2, 3]
+>>> mylisttwo[1]=6 thats why now if i make changes its not being reflected
+>>> mylisttwo
+[5, 6, 3]
+>>> mylistone
+[5, 2, 3]
+
+
+in order to create refrence
+obj1= obj2[:] its called slicing and it will take all the value from start to end
+
+import copy
+>>> mylistthree = copy.deepcopy(mylistone) this will copy all the list inside the list
+
+to check if both the values have the same memory refrence then var1 is var2
+true means yes else no
+
+>>> l=4
+>>> m=l
+>>> m is l
+True
+
+//this is to check if the values are same or not
+>>> m==l
+True

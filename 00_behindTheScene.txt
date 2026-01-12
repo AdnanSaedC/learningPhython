@@ -1,0 +1,43 @@
+look at 01_basic __pychache__
+
+everything which has __ deals with python inner working
+
+
+this is how thing works 
+python scripy gets converted into byte code which runs on python virtual machine
+
+byte code is low level language and machine independent
+
+byte code runs faster because most of the checking of syntax and all 
+already happend 
+
+.pyc compiled python
+
+here __pychache__ here is the compiled maybe byte code version of hello.pyc
+the format is sourceCode.pythonCompiler(pythonVersion actual name)-version.extension
+usually cpython there are other varinats we have jpython(for java binaries)
+
+this work __pychache__ only for imported file(for optimiization)
+
+
+python vertual machine
+it isnothing but a loop which works continuosly and the thing it gets itexecutes that
+
+that why python is an interpreted language
+
+every language needs a runtime engine
+
+byte code is not a machine code
+
+what is byte code and frozen binaries(compiled version)
+
+
+so the flow is script to byte code to pvm
+and while importing from files byte code is explictly seen because it increases the effieciency if you are importing else where no need of byte code to be generated
+
+here frozen binaries means they take the script and vm bundled together and you can run the entire script anywhere whithout python being installed
+
+look when ever a new variable points to the memory space the ref_count get increases
+if two variable poiting somewhere then ref_count = 2
+
+the most important crazy detail in python is not a single variable holds the data types it is the memory allocation which has got the data types the variables are just poiting towards it

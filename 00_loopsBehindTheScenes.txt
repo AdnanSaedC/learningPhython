@@ -1,0 +1,121 @@
+iteration toools
+like for,while,comprehension(squares_of_evens = [x**2 for x in range(10) if x % 2 == 0]
+# Output: [0, 4, 16, 36, 64]
+)
+
+we need iterable objects like list,file etc
+look this is how loops work in python 
+iterable tools works on iterable objects and then it returns iter which has first objectv location and next 
+
+and when we call __next__ it gives next value address and consecutive value location for the last value an exception is raised
+
+A for loop calls iter() on an iterable to get an iterator, then repeatedly calls __next__() to get the next value until StopIteration is raised.
+
+behind the scene the next just updates the next location
+
+file has its own iter() other things dont
+
+>>> f = open('09_time.py')
+>>> iter(f) is f
+True
+>>> iter(open('09_time.py')) is f
+False
+
+from this two things are clear when you open a file it hgive files iter object for list that wasnot the case
+
+>>> f = open('09_time.py')
+>>> f
+<_io.TextIOWrapper name='09_time.py' mode='r' encoding='cp1252'>  iter objcet will point to aisngle location it is the job of next to point to a place where the next value lies
+>>> f.next()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+    f.next()
+    ^^^^^^
+AttributeError: '_io.TextIOWrapper' object has no attribute 'next'
+>>> f.__next__()
+'import time\n'
+>>>
+>>> f.__next__()
+'\n'
+>>> f.__next__()
+'waitTimeInSeconds=1\n'
+>>> f.__next__()
+'attempt=1\n'
+>>> f.__next__()
+'maxAttempt=5\n'
+>>> f.__next__()
+'\n'
+>>> f.__next__()
+'while attempt <= maxAttempt:\n'
+>>> f.__next__()
+'    print("Attempt:",attempt,"-waitTime:",waitTimeInSeconds)\n'
+>>> f.__next__()
+'    attempt+=1\n'
+>>> f.__next__()
+'    waitTimeInSeconds*=2\n'
+>>> f.__next__()
+'    time.sleep(waitTimeInSeconds)'
+>>> f.__next__()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+    f.__next__()
+    ~~~~~~~~~~^^
+StopIteration  here stop iteration exception was raised
+>>> f.__next__()
+
+
+for list for object same
+>>> myList = [1,2,3]
+>>> i= iter(myList)     
+>>> i
+<list_iterator object at 0x000001FC441905B0>
+>>> i.next()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+    i.next()
+    ^^^^^^
+AttributeError: 'list_iterator' object has no attribute 'next'
+>>> i.__next__()
+1
+>>> i.__next__()
+2
+>>> i.__next__()
+3
+>>> i.__next__()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+    i.__next__()
+    ~~~~~~~~~~^^
+StopIteration
+
+
+
+proof that only file has its own iters
+we are creating here
+>>> R = range(0,5)
+>>> next(R)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+    next(R)
+    ~~~~^^^
+TypeError: 'range' object is not an iterator
+>>> R
+range(0, 5)
+>>> i = iter(R)
+>>> next(i)
+0
+>>> next(i)
+1
+>>> next(i)
+2
+>>> next(i)
+3
+>>> next(i)
+4
+>>> next(i)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+    next(i)
+    ~~~~^^^
+StopIteration
+>>>

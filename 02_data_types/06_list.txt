@@ -1,0 +1,45 @@
+order matters here to such an extent that its an dictionary with pre-generated and fixed key(my opinion not a fact)
+
+list[-1] this will return the last value
+list[start:end+1:hop]
+
+it is mutable
+
+>>> var =['adnan','saed','kk','lll']
+>>> var[1:2]='hhsh' 
+it is treating as an array
+
+>>> var
+['adnan', 'h', 'h', 's', 'h', 'kk', 'lll']
+>>> var[1:2]=['hhsh']
+>>> var
+['adnan', 'hhsh', 'h', 's', 'h', 'kk', 'lll'] to insert at a point using this syntax
+>>> 
+
+
+>>> var[:0]
+[]
+
+to insert in list
+>>> var[1:1]=['kk']
+>>> var
+['adnan', 'kk', 'hhsh', 'h', 's', 'h', 'kk', 'lll']
+
+>>> for i in var:
+...     print(i,end="/")
+... 
+adnan/kk/hhsh/h/s/h/kk/lll/1
+
+list.append('varToAdd')
+list.pop() to remove the last item
+list.remove('var') to remove something
+lis.insert(index,'value')
+
+to create a copy of something which has its own location
+newList=list both of them has same reference now
+newList = list.copy() it has its own location
+
+list comprehension
+>>> y = [x for x in range(10)] the thing is you can declare a variable on the fly and add value to it
+>>> y
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]

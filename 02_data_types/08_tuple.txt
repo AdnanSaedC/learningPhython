@@ -1,0 +1,21 @@
+immutable list
+
+>>> tuple1=(1,2,3)
+>>> tuple1[3]=4  you can't add value to the tuple
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'tuple' object does not support item assignment
+>>> tuple2=(4,5)
+>>> tuple3=tuple1+tuple2
+>>> tuple3  this is the only way to add or expand tuple
+(1, 2, 3, 4, 5)
+>>> 
+
+tuple.count(value)
+
+
+unwrapping tuples the only catch is the len of the tuple and the variable has to be same
+>>> (val1,val2,val3)=tuple1
+>>> val1
+1
+>>> 

@@ -41,3 +41,5 @@ look when ever a new variable points to the memory space the ref_count get incre
 if two variable poiting somewhere then ref_count = 2
 
 the most important crazy detail in python is not a single variable holds the data types it is the memory allocation which has got the data types the variables are just poiting towards it
+
+there is something called closure which is nothing but when you return a function all the varibale declared and used inside also goes with that function

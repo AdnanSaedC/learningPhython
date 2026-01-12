@@ -53,3 +53,4 @@ def evenGeneratot(num):
 for i in evenGeneratot(10):
     print(i)
 
+# while designing recursive functions focus on exit part

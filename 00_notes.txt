@@ -19,3 +19,6 @@ reload(filename)  you have to execute this line in order to get current code
 in order to clear the terminal in python shell ctrl+L
 
 if elif else
+
+
+sudo apt install python3-requests

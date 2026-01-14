@@ -1,0 +1,32 @@
+it gives an entire machine with a python installed
+
+and the packages are documneted in requirement.txt file
+
+virtual environment is equivalent to a new machine(we are not creating virtual machine we are creating virtual environment)
+
+first install virtualenv
+then read official python doc
+
+python3 -m venv .virtualenvi
+we have created our first virtual environment
+
+to activate the virtual environment
+ source .virtualenvi/bin/activate
+
+
+(.virtualenvi) kingkabandaadnan@penguin:~/phython/16_virtual_environment$ python --version
+Python 3.11.2 this is to check
+(.virtualenvi) kingkabandaadnan@penguin:~/phython/16_virtual_environment$ 
+
+to see the packages installed
+pip list
+Package    Version
+---------- -------
+pip        23.0.1
+setuptools 66.1.1
+
+pip list -> requirement.txt
+to create a soemthing like Package.json using this we can install anything
+
+to deactive a virtual environment
+type deactive

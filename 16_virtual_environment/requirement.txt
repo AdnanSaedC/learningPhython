@@ -1,0 +1,6 @@
+Package    Version
+---------- -------
+pip        23.0.1
+setuptools 66.1.1
+
+

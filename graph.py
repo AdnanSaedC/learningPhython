@@ -20,6 +20,41 @@ class Graph:
         for vertex in self.adjacencyList:
             print(vertex ," -> ",self.adjacencyList[vertex])
 
+    def BFS(self, source):
+        visited = {}
+        for vertex in self.adjacencyList.keys():
+            visited[vertex] = False
+    
+        queue = deque([source])
+        visited[source] = True
+    
+        while queue:
+            node = queue.popleft()
+            print(" ",node, end=" -> ")
+    
+            for vertex in self.adjacencyList[node]:
+                if not visited[vertex]:
+                    visited[vertex] = True
+                    queue.append(vertex)
+                    
+    def DFS(self, source):
+        visited = {}
+        stack = [source]
+    
+        for vertex in self.adjacencyList.keys():
+            visited[vertex] = False
+    
+        while stack:
+            vertex = stack.pop()
+    
+            if not visited[vertex]:
+                visited[vertex] = True
+                print(" ",vertex, end=" -> ")
+    
+                for adjacentNode in self.adjacencyList[vertex]:
+                    if not visited[adjacentNode]:
+                        stack.append(adjacentNode)
+
 
 g=Graph()
 g.addVertex(1,2)
